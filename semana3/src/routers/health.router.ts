@@ -13,4 +13,5 @@ router.get('/check', (req: Request, res: Response) => {
     res.send(healthCheck);
 });
 
+
 export default router;
