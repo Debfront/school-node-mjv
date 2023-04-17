@@ -3,7 +3,6 @@ import cors from 'cors';
 import routes from './routers';
 import connection from './config/database';
 
-
 const app = express();
 
 app.use(cors());
