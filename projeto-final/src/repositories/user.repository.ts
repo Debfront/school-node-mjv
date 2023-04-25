@@ -20,7 +20,7 @@ class UserRepository {
     }
 
     remove(document: string) {
-        return User.deleteOne({document: document});
+        return User.deleteOne({_id : document});
     }
 }
 

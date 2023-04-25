@@ -9,8 +9,8 @@ router.get('/', async (req: Request, res: Response) => {
    res.send(users);
 });
 
-router.get('/:document', async (req: Request, res: Response) => {
-   const user = await UsersService.getByDocument(req.params.document);
+router.get('/:id', async (req: Request, res: Response) => {
+   const user = await UsersService.getByDocument(req.params._id);
    if (!user) return res.status(400).send({ message: " Usuario não encontrado" });
    res.status(201).send(user);
 });
@@ -50,7 +50,7 @@ router.delete('/remove/:document', async (req: Request, res: Response) => {
       await UsersService.remove(req.params.document);
       res.status(200).send({ message: " Usuario excluído com sucesso" });
    } catch (error: any) {
-      res.status(400).send({ message: error.message });
+      res.status(400).send({ message: "Usuario não existe"});
    }
 });
 
