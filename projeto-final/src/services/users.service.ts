@@ -23,6 +23,7 @@ class UserService{
     }
 
     update(document: string, user: Partial<IUser>) {
+        
        return UserRepository.update(document, user);
     }
 }

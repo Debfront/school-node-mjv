@@ -16,7 +16,7 @@ class UserRepository {
     }
 
     update(document: string, user: Partial<IUser>){
-        return User.updateOne({document: document}, { $set: user});
+        return User.updateOne({_id: document}, { $set: user});
     }
 
     remove(document: string) {

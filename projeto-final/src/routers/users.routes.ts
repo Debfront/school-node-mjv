@@ -35,7 +35,7 @@ router.post('/', async (req: Request, res: Response) => {
    
 });
 
-router.put('/:document', async (req: Request, res: Response) => {
+router.put('/update/:document', async (req: Request, res: Response) => {
    
    try {
       await UsersService.update(req.params.document, req.body);
@@ -55,4 +55,3 @@ router.delete('/remove/:document', async (req: Request, res: Response) => {
 });
 
 export default router;
-
